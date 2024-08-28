@@ -5,31 +5,31 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='realsense_tracking',
-            executable='1_realsense_pose.py',
+            executable='realsense_pose_node',
             name='realsense_pose_node',
             output='screen'
         ),
         Node(
             package='realsense_tracking',
-            executable='2_iAHRS.py',
+            executable='iAHRS_node',
             name='iAHRS_node',
             output='screen'
         ),
         Node(
             package='realsense_tracking',
-            executable='3_dynamixel.py',
+            executable='dynamixel_node',
             name='dynamixel_node',
             output='screen'
         ),
         Node(
             package='realsense_tracking',
-            executable='4_realtime_audio_pc.py',
+            executable='realtime_audio_pc_node',
             name='realtime_audio_pc_node',
             output='screen'
         ),
         Node(
             package='realsense_tracking',
-            executable='5_witmotion_imu_ros.py',
+            executable='witmotion_imu_node',
             name='witmotion_imu_node',
             output='screen'
         ),
@@ -37,21 +37,20 @@ def generate_launch_description():
 
         Node(
             package='gps_navigation',
-            executable='openrouteservice_navigation_api.py',
+            executable='gps_listener_node',
             name='gps_listener_node',
             output='screen'
         ),
         Node(
             package='gps_navigation',
-            executable='zed_f9p.py',
+            executable='current_gps_node',
             name='current_gps_node',
             output='screen'
         ),
         Node(
             package='gps_navigation',
-            executable='purepursuit.py',
+            executable='pure_pursuit_node',
             name='pure_pursuit_node',
             output='screen'
         )
     ])
-
